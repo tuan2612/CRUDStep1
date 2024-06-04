@@ -4,6 +4,7 @@ package com.leadsgen.project.controller;
 import com.leadsgen.project.DTO.CategoryDTO;
 import com.leadsgen.project.DTO.CreateCategoryDTO;
 import com.leadsgen.project.DTO.DeleteCategoryDTO;
+import com.leadsgen.project.DTO.UpdateCategoryDTO;
 import com.leadsgen.project.entity.Category;
 import com.leadsgen.project.messenger.Response;
 import com.leadsgen.project.service.CategoryService;
@@ -54,7 +55,7 @@ public class CategoryController {
     }
 
     @PutMapping("update")
-    public ResponseEntity<?> updateCategory( @RequestBody CreateCategoryDTO form) {
+    public ResponseEntity<?> updateCategory( @RequestBody UpdateCategoryDTO form) {
         Category category = modelMapper.map(form, Category.class);
         try {
             categoryService.updateCategory(category);
