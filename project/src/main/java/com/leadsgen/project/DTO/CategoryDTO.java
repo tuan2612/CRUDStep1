@@ -1,4 +1,4 @@
-package com.leadsgen.project.DTO;
+package com.leadsgen.project.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

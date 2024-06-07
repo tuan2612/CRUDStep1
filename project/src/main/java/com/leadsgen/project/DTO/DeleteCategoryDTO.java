@@ -1,4 +1,4 @@
-package com.leadsgen.project.DTO;
+package com.leadsgen.project.dto;
 
 import com.leadsgen.project.validate.CategoryIdIsNotExist;
 import lombok.AllArgsConstructor;

@@ -1,10 +1,10 @@
 package com.leadsgen.project.controller;
 
 
-import com.leadsgen.project.DTO.CategoryDTO;
-import com.leadsgen.project.DTO.CreateCategoryDTO;
-import com.leadsgen.project.DTO.DeleteCategoryDTO;
-import com.leadsgen.project.DTO.UpdateCategoryDTO;
+import com.leadsgen.project.dto.CategoryDTO;
+import com.leadsgen.project.dto.CreateCategoryDTO;
+import com.leadsgen.project.dto.DeleteCategoryDTO;
+import com.leadsgen.project.dto.UpdateCategoryDTO;
 import com.leadsgen.project.entity.Category;
 import com.leadsgen.project.messenger.Response;
 import com.leadsgen.project.service.CategoryService;
