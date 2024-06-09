@@ -32,7 +32,7 @@ public class CategoryController {
     @Autowired
     private ModelMapper modelMapper;
 
-    @GetMapping("getAll")
+    @GetMapping
     public Page<CategoryDTO> getAllCategory(@PageableDefault(page = 0, size = 5) Pageable pageable) {
         Page<Category> dto = categoryService.getAllCategory(pageable);
         List<CategoryDTO> dtos = modelMapper.map(dto.getContent(), new TypeToken<List<CategoryDTO>>() {
@@ -41,7 +41,7 @@ public class CategoryController {
         return dtoPages;
     }
 
-    @PostMapping("create")
+    @PostMapping
     public ResponseEntity<?> createCategory(@RequestBody @Valid CreateCategoryDTO form) {
         Category category = modelMapper.map(form, Category.class);
         try {
@@ -54,7 +54,7 @@ public class CategoryController {
         }
     }
 
-    @PutMapping("update")
+    @PutMapping
     public ResponseEntity<?> updateCategory( @RequestBody UpdateCategoryDTO form) {
         Category category = modelMapper.map(form, Category.class);
         try {
@@ -68,7 +68,7 @@ public class CategoryController {
 
     }
 
-    @DeleteMapping("delete")
+    @DeleteMapping
     public ResponseEntity<?> deleteCategory(DeleteCategoryDTO form ) {
         Category category = modelMapper.map(form, Category.class);
         try {
